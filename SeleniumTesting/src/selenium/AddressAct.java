@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AddressAct {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "D:\\Workspace\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://tutorialsninja.com/demo/index.php?route=common/home");
@@ -103,11 +103,11 @@ public class AddressAct {
 				WebElement conr1 = driver.findElement(By.id("input-country"));
 				Select select2 = new Select(conr1);
 				select2.selectByVisibleText("India");
-				
+				Thread.sleep(3000);				
 				//Enter the State
-				WebElement sta1 = driver.findElement(By.id("input-zone"));
+				WebElement sta1 = driver.findElement(By.xpath("//*[@id=\"input-zone\"]"));
 				Select select3 = new Select(sta1);
-				select3.selectByVisibleText("Kerala");
+				select3.selectByVisibleText("Goa");
 				
 				//Enter the Submit address
 				WebElement subadd1 = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div[2]/input"));
@@ -124,6 +124,10 @@ public class AddressAct {
 				//After the edit and  Submit address
 				WebElement subadd2 = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/div[2]/input"));
 				subadd2.submit();
+				
+				//Delete the Address
+				WebElement del = driver.findElement(By.xpath("//*[@id=\"content\"]/div[1]/table/tbody/tr[1]/td[2]/a[2]"));
+				del.click();
 				
 				}
 
