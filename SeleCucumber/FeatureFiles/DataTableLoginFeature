@@ -1,0 +1,7 @@
+Feature: This is the login feature for tutorialninja
+Scenario: This is login scenario
+Given user is on the login page
+When the user enters the Credentials
+|tester38@gmail.com|Test@123|
+And click the Submit button
+Then the user see the home page
