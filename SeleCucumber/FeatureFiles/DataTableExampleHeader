@@ -1,0 +1,10 @@
+Feature: This is the login feature for tutorialninja
+Scenario Outline: This is login scenario
+Given Tester is at the login page
+When user enters "<UserName>" and Password "<Password>"
+And clicks submit
+Examples:
+|UserName|Password|
+|tester38@gmail.com|Test@123|
+|tester43@gmail.com|Test@123|
+|tester44@gmail.com|Test@123|

@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="FeatureFiles/DataTableHeaderFeature", glue="stepdefinition")
+@CucumberOptions(features="FeatureFiles/DataTableExampleHeader", glue="stepdefinition")
 public class RunnerClass {
 
 }
