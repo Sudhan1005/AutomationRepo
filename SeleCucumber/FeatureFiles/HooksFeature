@@ -1,0 +1,5 @@
+Feature: Hooks concept training
+Scenario: Justice league war
+Given Super heros meet the suoerman after the wake up
+When batman uses the power box at larger lab with wonderwoman,flash,aquaman
+Then Super man beat the all the suoer heroes except batman
